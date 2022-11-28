@@ -1,0 +1,59 @@
+#if !defined(SMART_PTR)
+#define SMART_PTR
+
+    #include "exception.h"
+
+    namespace warning{
+        class memory_free{
+            public:
+                // str memory;
+                // constructor(memory_free)(str memory){this->memory = memory;}
+                def getwarning(){
+                    warn("Memory not released which may cause memory leak so releasing it at ");
+                }
+        };
+    }
+    def raise(warning::memory_free mf){
+        mf.getwarning();
+    }
+    //This class is made to make the use of pointers safe by freeing the memory when program ends.
+    template<typename T>
+    class smrt_ptr{
+            
+        public:
+            T* ptr;
+            int free_call = 0;
+            smrt_ptr(){}
+            // smrt_ptr(T v){this->ptr = &v;}
+            smrt_ptr(T* ptr){
+                // delete this->ptr;
+                this->ptr = ptr;
+            }
+            smrt_ptr(T v){
+                this->ptr = new T(v);
+            }
+            //This method is used to free the memory and it's recommanded to call this once.
+            def free(){
+                free_call=1;
+                delete this->ptr;
+            }
+        
+            //This method is used to allocate the memory.
+            def allocate(T val){
+                free_call = 0;
+                // delete ptr;
+                this->ptr = new T(val);
+            }
+            ~smrt_ptr(){
+                if(free_call == 0){
+                    // char buffer[10];
+                    // char *ptr = new char[20];
+                    raise(warning::memory_free());
+                    printf("\033[31m%p\033[0m",this->ptr);
+                    delete ptr; 
+                }
+            }
+             
+    };
+
+#endif // SMART_PTR

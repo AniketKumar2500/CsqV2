@@ -1,0 +1,28 @@
+#if !defined(BUILTINS_CSQM)
+#define BUILTINS_CSQM
+
+    #include "io.h"
+    // #include "exception.h"
+    //This is commented because there is no need to add str.h because it's already included in array.h.
+    #include "str.h"
+    #include "smart_ptr.csqm"
+    // #include "array.h"
+    // #include "dict.h"
+    //Range based loop facility function
+    def range(int start,int end_,int steps = 1){
+        array<int> ls;
+        for(int i=start;i<end_;i+=steps){
+            ls+=i;
+        }
+        return ls;
+    }
+    def range(int end_,int steps = 1){
+        array<int> ls;
+        for(int i=0;i<end_;i+=steps){
+            ls+=i;
+        }
+        return ls;
+    }
+    
+
+#endif // BUILTINS_CSQM
