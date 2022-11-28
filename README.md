@@ -12,7 +12,10 @@ This is the version 2 and the most advance version of Csq programming language.
 * Support OPPs
 * Support dynamic typing by using var and def keyword for functions
 * Allows to use C++ in Csq code
-
+# Building
+* Install all files via git
+* then compile all cpp files
+* at last go to Modules/fmt/ compile all headerfiles via g++
 # Examples 
 
 ## Hello World Program
