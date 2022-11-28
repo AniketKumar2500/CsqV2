@@ -1,0 +1,5 @@
+array<int> arr;
+for(var i : range(1000)){
+    arr += i
+}
+print(arr)
