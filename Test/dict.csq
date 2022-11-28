@@ -1,0 +1,4 @@
+dict<str,int> data
+data.add("k1",58)
+data.add("k2",47)
+print(data)
