@@ -6,7 +6,7 @@ This is the version 2 and the most advance version of Csq programming language.
 * Easy Syntax
 * Fast Runtime
 * Having Libraries which can provide various supports
-* Platform independent  (Executable haven't yet created for Windows and MacOs)
+* Platform independent  (Executable haven't yet created for Windows)
 
 # Specialties
 * Support OPPs
@@ -27,6 +27,27 @@ This is the version 2 and the most advance version of Csq programming language.
 > `array<int> arr = {3,4,3,4}` <br>
   `print(arr)`
   
+## Create a function
+<li>Creating a function in CsqV2 can we done in two ways that is writing function using lamda in .csq file and other one is to create using a .csqm file.</li>
+<li>//In csq file:<br>
+
+> def foo lam(){<br>
+  .....<br>
+  }
+</li>
+<li>//In csqm file and importing via import statement from .csq:<br>
+//test.csqm
+> def foo(){<br>
+.....</br>
+}
+
+//main.csq
+
+> import test <br>
+  foo()
+
+</li>
+
 ## Working of import statement
 > import pd.dframe
 
