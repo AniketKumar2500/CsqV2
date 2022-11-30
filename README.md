@@ -6,7 +6,7 @@ This is the version 2 and the most advance version of Csq programming language.
 * Easy Syntax
 * Fast Runtime
 * Having Libraries which can provide various supports
-* Platform independent  (Executable haven't yet created for Windows)
+* Platform independent  (The translator haven't yet created for Windows but if you are in Windows so you could use Csq in Github codespace)
 
 # Specialties
 * Support OPPs
