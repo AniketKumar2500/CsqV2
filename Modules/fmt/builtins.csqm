@@ -24,5 +24,18 @@
         return ls;
     }
     
+    //This function will tokenize the string using strtok a built-in function in C.
+    def split(str ln,str tok_ = ","){
+        array<str> s;
+        
+        // ln+=", ";
+        char * token = strtok(ln.Str, tok_.Str);
+        while(token != NULL){
+            s.add(str(token));
+            token = strtok(NULL, tok_.Str);
+        }
+        return s;
+    }
+    
 
 #endif // BUILTINS_CSQM
