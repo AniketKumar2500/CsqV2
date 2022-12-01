@@ -35,11 +35,20 @@
                 imports += "\n";
             }
             else if(find_str(i.Str,str("for").Str) == 0 && find_str(i.Str,str("class").Str) == 0 && find_str(i.Str,str("#include").Str) == 0 && find_str(i.Str,str("//").Str) == 0 && find_str(i.Str,str(";").Str) == 0){
-                code_ += i;
-                code_ += ";";
+
+                if(ln != code.len()){
+                    code_ += i;
+                    code_.pop_bk();
+                    code_.push_bk(';');
+                    code_.push_bk('\n');
+                }
+                else{
+                    code_ += i;
+                    code_.push_bk(';');
+                }
             }
             else{
-                code_ += i;
+                code_  += i;
             }
             ln++;
         }
