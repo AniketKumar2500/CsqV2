@@ -1,5 +1,6 @@
 # CsqV2
-This is the version 2 and the secode most advance version of Csq programming language.
+This is the version 2 and the second most advance version of Csq programming language.
+The most advance version of Csq is Csq3 whose repo is present at https://github.com/CsqLang/Csq3
 
 
 ## Features
